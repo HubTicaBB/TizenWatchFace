@@ -19,6 +19,11 @@ namespace WatchFace
                 if (_time == value) return;
                 _time = value;
                 OnPropertyChanged();
+
+                // Whenever the 'Time' property setter is executed, calculate new value for 'SecondsRotation' based on current second
+                // and notify the view about the change by calling 'OnPropertyChanged' method with correct parameter.
+                SecondsRotation = _time.Second * 6;
+                OnPropertyChanged(nameof(SecondsRotation));
             }
         }
 
