@@ -28,6 +28,8 @@ namespace WatchFace
         }
 
         public int SecondsRotation { get; private set; }
+        public bool IsCharging { get; private set; }
+        public int BatteryPercent { get; private set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
