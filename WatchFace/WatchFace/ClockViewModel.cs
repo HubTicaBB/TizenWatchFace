@@ -22,6 +22,8 @@ namespace WatchFace
             }
         }
 
+        public int SecondsRotation { get; private set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
