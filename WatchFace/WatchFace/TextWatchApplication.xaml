@@ -25,11 +25,11 @@
                        VerticalTextAlignment="Center"
                        FontSize="6"
                        TextColor="#C0D5F4"
-                       Text="50%" />
+                       Text="{Binding BatteryPercent, StringFormat='{0}%'}" />
 
                 <Image AbsoluteLayout.LayoutBounds="142, 275, 10, 13"
                        Source="charging.png"
-                       IsVisible="True" />
+                       IsVisible="{Binding IsCharging}" />
             </AbsoluteLayout>
         </ContentPage>
     </Application.MainPage>
