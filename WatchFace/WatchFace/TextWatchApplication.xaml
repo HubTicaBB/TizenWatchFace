@@ -10,7 +10,7 @@
 
                 <Image AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
                        Source="satellite.png"
-                       Rotation="0" />
+                       Rotation="{Binding SecondsRotation}" />
 
                 <Label AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
                        HorizontalTextAlignment="Center"
@@ -18,7 +18,7 @@
                        FontAttributes="Bold"
                        FontSize="24"
                        TextColor="#FFFFFF"
-                       Text="00:00" />
+                       Text="{Binding Time, StringFormat='{}{0:HH:mm}'}" />
             </AbsoluteLayout>
         </ContentPage>
     </Application.MainPage>
