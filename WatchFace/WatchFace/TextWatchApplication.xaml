@@ -19,6 +19,17 @@
                        FontSize="24"
                        TextColor="#FFFFFF"
                        Text="{Binding Time, StringFormat='{}{0:HH:mm}'}" />
+
+                <Label AbsoluteLayout.LayoutBounds="150, 269, 60, 25" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="6"
+                       TextColor="#C0D5F4"
+                       Text="50%" />
+
+                <Image AbsoluteLayout.LayoutBounds="142, 275, 10, 13"
+                       Source="charging.png"
+                       IsVisible="True" />
             </AbsoluteLayout>
         </ContentPage>
     </Application.MainPage>
