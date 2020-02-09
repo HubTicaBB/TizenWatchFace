@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Tizen.System;
+
 namespace WatchFace
 {
     public class ClockViewModel : INotifyPropertyChanged
@@ -30,6 +32,12 @@ namespace WatchFace
         public int SecondsRotation { get; private set; }
         public bool IsCharging { get; private set; }
         public int BatteryPercent { get; private set; }
+
+        public ClockViewModel()
+        {
+            IsCharging = Battery.IsCharging;
+            BatteryPercent = Battery.Percent;
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
