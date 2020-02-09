@@ -6,11 +6,19 @@
         <ContentPage>
             <AbsoluteLayout>
                 <Image AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
-                       Source="background.png"/>
+                       Source="background.png" />
 
                 <Image AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
                        Source="satellite.png"
-                       Rotation="0"/>
+                       Rotation="0" />
+
+                <Label AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       TextColor="#FFFFFF"
+                       Text="00:00" />
             </AbsoluteLayout>
         </ContentPage>
     </Application.MainPage>
