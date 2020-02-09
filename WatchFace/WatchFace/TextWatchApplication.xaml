@@ -7,6 +7,10 @@
             <AbsoluteLayout>
                 <Image AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
                        Source="background.png"/>
+
+                <Image AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
+                       Source="satellite.png"
+                       Rotation="0"/>
             </AbsoluteLayout>
         </ContentPage>
     </Application.MainPage>
