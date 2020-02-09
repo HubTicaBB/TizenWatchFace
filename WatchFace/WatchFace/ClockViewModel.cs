@@ -37,6 +37,21 @@ namespace WatchFace
         {
             IsCharging = Battery.IsCharging;
             BatteryPercent = Battery.Percent;
+
+            Battery.ChargingStateChanged += OnChargingStateChanged;
+            Battery.PercentChanged += OnPercentChanged;
+        }
+
+        private void OnPercentChanged(object sender, BatteryPercentChangedEventArgs e)
+        {
+            BatteryPercent = e.Percent;
+            OnPropertyChanged(nameof(BatteryPercent));
+        }
+
+        private void OnChargingStateChanged(object sender, BatteryChargingStateChangedEventArgs e)
+        {
+            IsCharging = e.IsCharging;
+            OnPropertyChanged(nameof(IsCharging));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
